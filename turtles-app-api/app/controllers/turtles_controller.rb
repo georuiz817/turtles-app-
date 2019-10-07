@@ -41,7 +41,7 @@ class TurtlesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_turtle
-      @turtle = Turtle.find(params[:id])
+      @turtle = Turtle.find_by_id(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

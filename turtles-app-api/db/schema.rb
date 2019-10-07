@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_07_185450) do
+ActiveRecord::Schema.define(version: 2019_10_07_192359) do
+
+  create_table "pizzas", force: :cascade do |t|
+    t.string "size"
+    t.string "style"
+    t.string "topping"
+    t.integer "turtle_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["turtle_id"], name: "index_pizzas_on_turtle_id"
+  end
 
   create_table "turtles", force: :cascade do |t|
     t.string "name"
@@ -19,4 +29,5 @@ ActiveRecord::Schema.define(version: 2019_10_07_185450) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "pizzas", "turtles"
 end
