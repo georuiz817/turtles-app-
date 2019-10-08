@@ -11,22 +11,25 @@
     <h1> Michelangelo Pizza Feeder </h1> 
 
     <form id = "pizza-form" action="#">    
+        <label for="size">Size:</label>
         <input type="string" name="size" id="size">
-        <label for="size">Size</label>
+        <br>
 
+        <label for="style">Style:</label>
         <input type="style" name="style" id="style">
-        <label for="style">Style</label>
+        <br>
 
+        <label for="topping">Topping:</label>
         <input type="topping" name="topping" id="topping">
-        <label for="topping">Topping</label>
-
+        <br>
+        
         <input type="submit" value="Feed Mikey the Pizza!" class="button">
     
     </form>
 
     <h4> Here is all the Pizza Mikey has been fed so far:</h4> 
     
-    <ul> 
+    <ul class="pizza-list"> 
     <!--Will list of mikeys pizzas that have been created-->
     </ul>
     
