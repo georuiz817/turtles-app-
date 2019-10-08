@@ -6,9 +6,6 @@
 //events 
 
 //create and return a pizza object
-//let createPizza 
-
-
 function createPizza() {
     return {
       pizza: {
@@ -16,26 +13,20 @@ function createPizza() {
         style: document.getElementById('style').value,
         topping: document.getElementById('topping').value
       },
-      Turtle: {
-        name: document.getElementById('author').value
-      }
     }
   }
   
+  
   function clearForm() {
-    document.getElementById("title").value = ""
-    document.getElementById("author").value = ""
-    document.getElementById("content").value = ""
+    document.getElementById("size").value = ""
+    document.getElementById("style").value = ""
+    document.getElementById("topping").value = ""
   }
 
-//display pizza in a UL 
-//let displayPizza
-
-//prevent default 
-//create pizza
-// display the pizza
-//let submitPizza 
 
 
-//let addSubmitEvent = () => {document.getElementById("pizza-form").addEventListener('submit, Api.submitForm')};
+  function pizzaSubmit() {
+    document.getElementById("pizza-form").addEventListener('submit', Api.pizzaSubmit);
+  }
+
 
