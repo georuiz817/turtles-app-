@@ -7,37 +7,45 @@
     <title>Document</title>
 </head>
 <body>
-
     <h1> Michelangelo Pizza Feeder </h1> 
 
-    <form id = "pizza-form" action="#">    
-        <label for="size">Size:</label>
-        <input type="string" name="size" id="size">
-        <br>
+    <div id ="new-pizza-container">
+            <form id = "pizza-form" action="#">    
 
-        <label for="style">Style:</label>
-        <input type="style" name="style" id="style">
-        <br>
+                    
+                <label for="turlte">Turtle</label>
+                <input type="string" name="turtle" id="turtle">     
+                <br>
 
-        <label for="topping">Topping:</label>
-        <input type="topping" name="topping" id="topping">
-        <br>
-        
-        <input type="submit" value="Feed Mikey the Pizza!" class="button">
+               <label for="size">Size:</label>
+               <input type="string" name="size" id="size">
+               <br>
+               
+               <label for="style">Style:</label>
+               <input type="style" name="style" id="style">
+               
+               <br>
+               <label for="topping">Topping:</label>
+               <input type="topping" name="topping" id="topping">
+               
+               <br>
+               <input type="submit" value="Feed Mikey the Pizza!" class="button">
+            </form>
+         </div>
     
-    </form>
+       
+         <h4> Here is all the Pizza Mikey has been fed so far:</h4> 
+         
+        <div id="pizza-list-container">
+            <ul id="pizza-list"> 
+            <!--Will list of mikeys pizzas that have been created-->
+            </ul>
+        </div>
 
-    <h4> Here is all the Pizza Mikey has been fed so far:</h4> 
-    
-    <ul class="pizza-list"> 
-    <!--Will list of mikeys pizzas that have been created-->
-    </ul>
-    
-
-<!--global.js should be first-->
-<script src="javascript/global.js"></script>
-<!--if using inheritance parent model should come before child model in here-->
-<!--index.js should be last -->
-<script src="javascript/index.js"> </script>
+    <script src="javascripts/models/pizza.js"></script>
+    <script src="javascripts/models/turtle.js"></script>
+    <script src="javascripts/service/api.js"></script>
+    <script src="javascripts/service/events.js"></script>
+    <script src="javascripts/index.js"></script>
 </body>
 </html>

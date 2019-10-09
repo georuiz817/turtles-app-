@@ -51,6 +51,6 @@ class PizzasController < ApplicationController
     end
     
     def turtle_params
-      params.require(:user).permit(:name)
+      params.require(:turtle).permit(:name)
     end
 end

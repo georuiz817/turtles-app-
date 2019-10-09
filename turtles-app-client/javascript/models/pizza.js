@@ -1,5 +1,5 @@
 class Pizza {
-    static all = []
+    static all = [];
 
     constructor(size,style,topping) {
         this.size = size;
@@ -8,16 +8,16 @@ class Pizza {
         Pizza.all.push(this);
       }
 
-    
-      template() {
-        // create html template to add to the innerHTML of the pizza-list
-        return `<li>${this.turtle.name} the ${this.turtle.color} Ninja Turtle ate a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li>`
+      // create function to add to the innerHTML of the pizza-list
+      returnPizza() {
+        return `Mikey ate a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li>`
       }
 
       display() {
         // display pizza details in a ul in the pizza-lists
-        document.getElementsByClassName("pizza-lists")[0].innerHTML += this.template();
+        document.getElementById("pizza-list").innerHTML = this.returnPizza();
       }
+
 
       static renderAll() {
         Pizza.all.forEach(pizza => pizza.display())

@@ -7,3 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Turtle.create(name:"Michelangelo", color: "orange")
+
+Pizza.create(size:"large",style:"regular", topping:"mushroom")
+
