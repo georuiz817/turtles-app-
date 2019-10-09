@@ -13,31 +13,7 @@ class TurtlesController < ApplicationController
     render json: @turtle
   end
 
-  # POST /turtles
-  def create
-    @turtle = Turtle.new(turtle_params)
-
-    if @turtle.save
-      render json: @turtle, status: :created, location: @turtle
-    else
-      render json: @turtle.errors, status: :unprocessable_entity
-    end
-  end
-
-  # PATCH/PUT /turtles/1
-  def update
-    if @turtle.update(turtle_params)
-      render json: @turtle
-    else
-      render json: @turtle.errors, status: :unprocessable_entity
-    end
-  end
-
-  # DELETE /turtles/1
-  def destroy
-    @turtle.destroy
-  end
-
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_turtle
