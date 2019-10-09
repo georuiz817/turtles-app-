@@ -1,52 +1,37 @@
-//dom 
-document.addEventListener('DOMContentLoaded', function(){
-  document.querySelector('form').addEventListener('submit', createPizza);
-  loadPizzas();
-})
+//dom
+document.addEventListener('DOMContentLoaded', function () {
+  addSubmitEventToPizza();
+  Api.getPizzas();
+});
 
 
-//base url and any other globals 
-let BASE_URL = 'http://localhost:3000'
 
-
-//functions to manage pizza 
-function createPizzas(e){
-e.preventDefault(); 
-let size = document.getElementById('size').value;
-let style = documentgetElementById('style').value;
-let topping = document.getElementById('topping').value;
-let ul = document.getElementById('pizza-list');
-
-let data = {
-  pizza: {
-    size: size,
-    style: style,
-    topping: topping 
+//functions
+function createData() {
+  return {
+    pizza: {
+      size: document.getElementById('size').value,
+      style: document.getElementById('style').value,
+      topping: document.getElementById('topping').value,
+    },
+    turtle: {
+      name: document.getElementById('name').value
+    }
   }
 }
-fetch(BASE_URL + '/pizzas', {
-  method: 'POST',
-  headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(data)
-})
-then(response => response.json())
-.then(pizza =>{
-  ul.innerHTML += (`<li>${pizza.size} - ${pizza.style} - ${pizza.topping}</li>`)
-})
-}
 
-function loadPizzas(){
-let ul = document.getElementById('pizza-list');
-//com with rails server
-fetch(BASE_URL + '/pizzas')
-.then(response => response.json())
-.then(pizzas => {
-  pizzas.forEach(pizza =>   ul.innerHTML += `<li>${pizza.size} - ${pizza.style} - ${pizza.topping}</li>`)
-})
+function clearForm() {
+  document.getElementById("size").value = ""
+  document.getElementById("style").value = ""
+  document.getElementById("topping").value = ""
 }
 
 
-//functions to manage turtles 
+
+
+//events 
+function addSubmitEventToPizza() {
+  document.getElementById("pizza-form").addEventListener('submit', Api.submitPizza);
+}
+
+
