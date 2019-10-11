@@ -8,7 +8,7 @@ class Turtle {
     }
 
     pizzas() {
-      Pizza.all.filter(pizza => Pizza.turtle.name === this.name);
+      Pizza.all.filter(pizza => pizza.turtle.name === this.name);
     }
   
     static find(name) {

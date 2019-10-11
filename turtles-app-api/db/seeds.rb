@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
-Pizza.create(size:'large',style:'regular', topping:'mushroom')
+donatello = Turtle.create(name: 'Donatello')
+Pizza.create(size:'large',style:'regular', topping:'mushroom', turtle_id:6)
 

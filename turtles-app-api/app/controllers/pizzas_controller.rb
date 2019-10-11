@@ -1,7 +1,7 @@
 class PizzasController < ApplicationController
   def index
       @pizzas = Pizza.all
-      render json: @pizzas
+      render json: @pizzas, include: [:turtle]
   end
 
   def show
@@ -9,9 +9,9 @@ class PizzasController < ApplicationController
     end
   
     def create
-      @turtle = turtle.find_or_create_by(name: turtle_params[:name])
+      @turtle = Turtle.find_or_create_by(name: turtle_params[:name])
       @pizza = @turtle.pizzas.build(pizza_params)
-  
+     
       if @pizza.save
         render json: @pizza, include: [:turtle], status: :created, location: @pizza
       else
@@ -41,6 +41,6 @@ class PizzasController < ApplicationController
       end
   
       def pizza_params
-        params.require(:pizza).permit(:name, :pizza_content)
+        params.require(:pizza).permit(:size, :style, :topping, :turtle_id)
       end
 end

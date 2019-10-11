@@ -9,17 +9,16 @@ class Pizza {
       }
 
       // create function to add to the innerHTML of the pizza-list
-      returnPizza() {
-        return `Mikey ate a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li>`
+      template() {
+        return ` <ul id="pizza-list"><li>Mikey ate a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li></ul>`
       }
 
       display() {
-        // display pizza details in a ul in the pizza-lists
-        document.getElementById("pizza-list").innerHTML = this.returnPizza();
+        document.getElementsByClassName("pizza-list")[0].innerHTML += this.template();
       }
 
 
-      static renderAll() {
+      static renderAllPizzas() {
         Pizza.all.forEach(pizza => pizza.display())
       }
 
