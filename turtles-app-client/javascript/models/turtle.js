@@ -3,7 +3,6 @@ class Turtle {
   
     constructor(name) {
       this.name = name;
-      this.color = color;
       Turtle.all.push(this);
     }
 

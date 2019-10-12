@@ -2,7 +2,7 @@ class Api {
     static baseUrl = 'http://localhost:3000'
   
     static getPizzas() {
-      fetch(Api.baseUrl + '/api/pizzas')
+      fetch(baseURL + '/api/pizzas/')
         .then(resp => resp.json())
         .then(pizzas => {
           pizzas.forEach(pizza => {
@@ -16,7 +16,7 @@ class Api {
     static submitPizza(event) {
       event.preventDefault();
       let data = createData();
-      fetch(Api.baseUrl + '/api/pizzas', {
+      fetch(Api.baseUrl + '/api/pizzas/', {
         method: "POST",
         headers: {
           'Accept': 'application/json',
@@ -26,10 +26,12 @@ class Api {
       })
         .then(response => response.json())
         .then(data => {
-          let turtle = Turtle.findOrCreate(data.turtle.name);
-          let pizza = new Pizza(data.pizza.size, data.pizza.style, data.pizza.topping);
-          pizza.display();
+         let turtle = Turtle.findOrCreate(data.field.name)
+         let pizza = new Pizza(data.size, data.style, data.topping);
+         pizza.display();
         })
     }
   
   }
+
+
