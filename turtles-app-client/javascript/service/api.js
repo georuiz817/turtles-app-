@@ -32,6 +32,7 @@ class Api {
          let pizza = new Pizza(data.size, data.style, data.topping);
          pizza.display();
         })
+        clearForm()
     }
   
   }

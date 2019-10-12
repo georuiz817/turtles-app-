@@ -1,5 +1,3 @@
-//functions
-
 // this is creating a pizza object via what is typed into the pizza form
 function createData() {
   return {
@@ -17,13 +15,8 @@ function clearForm() {
   document.getElementById('size').value = ""
   document.getElementById('style').value = ""
   document.getElementById('topping').value = ""
-  document.getElementById('turtle1').value = ""
 }
 
-//something to change turtle id into turtle name?
-
-
-//events 
 
 // this is adding a submit event to the pizza form, and will invoke the submit pizza button upon submit
 function addSubmitEventToPizza() {
@@ -31,7 +24,7 @@ function addSubmitEventToPizza() {
 }
 
 
-
+//dom
 document.addEventListener('DOMContentLoaded', function () {
   addSubmitEventToPizza();
   Api.getPizzas();
