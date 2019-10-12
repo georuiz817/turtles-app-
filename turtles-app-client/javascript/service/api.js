@@ -13,6 +13,8 @@ class Api {
         .catch(errors => console.log('d', errors))
     }
   
+    //submit is good, pizza is being sent to backend and created with a belongs to association
+    //need to get getting data from the backend working getpizzas 
     static submitPizza(event) {
       event.preventDefault();
       let data = createData();
