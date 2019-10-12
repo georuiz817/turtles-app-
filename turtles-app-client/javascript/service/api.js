@@ -1,8 +1,8 @@
 class Api {
     static baseUrl = 'http://localhost:3000'
-  
+  // pizzas are being grabbed, however page not generating the pizas until i refresh 
     static getPizzas() {
-      fetch(baseURL + '/api/pizzas/')
+      fetch(Api.baseUrl + '/api/pizzas/')
         .then(resp => resp.json())
         .then(pizzas => {
           pizzas.forEach(pizza => {
@@ -14,7 +14,7 @@ class Api {
     }
   
     //submit is good, pizza is being sent to backend and created with a belongs to association
-    //need to get getting data from the backend working getpizzas 
+    //need to get getting data from the backend working
     static submitPizza(event) {
       event.preventDefault();
       let data = createData();
