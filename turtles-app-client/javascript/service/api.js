@@ -6,7 +6,7 @@ class Api {
         .then(resp => resp.json())
         .then(pizzas => {
           pizzas.forEach(pizza => {
-            let newPizza = new Pizza(pizza.style, pizza.size, pizza.topping);
+            let newPizza = new Pizza(pizza.size, pizza.style, pizza.topping);
           })
           Pizza.renderAllPizzas();
         })
