@@ -1,6 +1,6 @@
 class Api {
     static baseUrl = 'http://localhost:3000'
-  // pizzas are being grabbed, however page not generating the pizas until i refresh 
+  
     static getPizzas() {
       event.preventDefault();
       fetch(Api.baseUrl + '/api/pizzas/')
@@ -14,20 +14,21 @@ class Api {
         .catch(errors => console.log('d', errors))
     }
 
+    
     static getTurtles() {
       fetch(Api.baseUrl + '/api/turtles/')
         .then(resp => resp.json())
         .then(turtles => {
           turtles.forEach(turtle => {
-            let newTurtle = new Turtle(turtle.name);
+            let newTurtle = new Turtle(turtle.name,turtle.id);
           })
+          Turtle.renderAllTurtles();
          })
         .catch(errors => console.log('d', errors))
       }
 
   
-    //submit is good, pizza is being sent to backend and created with a belongs to association
-    //need to get getting data from the backend working
+
     static submitPizza(event) {
       event.preventDefault();
       let data = createData();

@@ -11,7 +11,7 @@ class Pizza {
 
       // create function to add to the innerHTML of the pizza-list
       template() {
-        return `<li>${this.turtle_id} was fed a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li>`
+        return `<li> Turtle ${this.turtle_id} was fed a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li>`
       }
 
 

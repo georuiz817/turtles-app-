@@ -18,6 +18,7 @@ function clearPizzaForm() {
 }
 
 
+
 // this is adding a submit event to the pizza form, and will invoke the submit pizza button upon submit
 function addSubmitEventToPizza() {
   document.getElementById("pizza-form").addEventListener('submit', Api.submitPizza);

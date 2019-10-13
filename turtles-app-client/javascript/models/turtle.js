@@ -1,8 +1,9 @@
 class Turtle {
     static all = []
   
-    constructor(name) {
+    constructor(name,id) {
       this.name = name;
+      this.id = id
       Turtle.all.push(this);
     }
 
@@ -21,6 +22,19 @@ class Turtle {
       } else {
         return new Turtle(name);
       }
+    }
+
+    template() {
+      return `<li>${this.name} is turtle ${this.id}</li>`
+    }
+
+
+    turtledisplay() {
+      document.getElementsByClassName("allNames")[0].innerHTML += this.template();
+    }
+
+    static renderAllTurtles() {
+      Turtle.all.forEach(turtle => turtle.turtledisplay())
     }
 
 }
