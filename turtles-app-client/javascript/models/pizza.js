@@ -1,11 +1,11 @@
 class Pizza {
     static all = [];
   
-    constructor(size,style,topping,turtle) {
+    constructor(size,style,topping,turtle_id) {
         this.size = size;
         this.style = style;
         this.topping = topping;
-        this.turtle_id = turtle;
+        this.turtle_id = turtle_id;
         Pizza.all.push(this);
       }
 

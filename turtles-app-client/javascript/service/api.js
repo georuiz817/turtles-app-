@@ -41,7 +41,7 @@ class Api {
       })
         .then(response => response.json())
         .then(data => {
-         let pizza = new Pizza(data.size, data.style, data.topping);
+         let pizza = new Pizza(data.size, data.style, data.topping, data.turtle_id);
          pizza.display();
         })
         clearPizzaForm()
