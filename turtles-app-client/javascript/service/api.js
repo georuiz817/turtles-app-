@@ -2,11 +2,12 @@ class Api {
     static baseUrl = 'http://localhost:3000'
   // pizzas are being grabbed, however page not generating the pizas until i refresh 
     static getPizzas() {
+      event.preventDefault();
       fetch(Api.baseUrl + '/api/pizzas/')
         .then(resp => resp.json())
         .then(pizzas => {
           pizzas.forEach(pizza => {
-            let newPizza = new Pizza(pizza.size, pizza.style, pizza.topping);
+            let newPizza = new Pizza(pizza.size, pizza.style, pizza.topping, pizza.turtle_id);
           })
           Pizza.renderAllPizzas();
         })
@@ -40,7 +41,6 @@ class Api {
       })
         .then(response => response.json())
         .then(data => {
-         let turtle = Turtle.findOrCreate(data.field.name)
          let pizza = new Pizza(data.size, data.style, data.topping);
          pizza.display();
         })

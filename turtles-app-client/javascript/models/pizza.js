@@ -5,13 +5,13 @@ class Pizza {
         this.size = size;
         this.style = style;
         this.topping = topping;
-        this.turtle = turtle;
+        this.turtle_id = turtle;
         Pizza.all.push(this);
       }
 
       // create function to add to the innerHTML of the pizza-list
       template() {
-        return `<li>was fed a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li>`
+        return `<li>${this.turtle_id} was fed a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li>`
       }
 
 
