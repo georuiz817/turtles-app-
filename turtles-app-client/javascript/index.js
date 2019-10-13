@@ -11,7 +11,7 @@ function createData() {
 }
 
 // this will clear the pizza form values and set them to empty 
-function clearForm() {
+function clearPizzaForm() {
   document.getElementById('size').value = ""
   document.getElementById('style').value = ""
   document.getElementById('topping').value = ""
@@ -27,5 +27,7 @@ function addSubmitEventToPizza() {
 //dom
 document.addEventListener('DOMContentLoaded', function () {
   addSubmitEventToPizza();
+  Api.getTurtles();
   Api.getPizzas();
+
 });

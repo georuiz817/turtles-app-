@@ -5,7 +5,7 @@ class PizzasController < ApplicationController
   end
 
   def show
-      render json: @pizza
+      render json: @pizza,  include: [:turtle]
     end
   
     def create

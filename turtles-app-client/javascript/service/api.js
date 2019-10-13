@@ -12,6 +12,18 @@ class Api {
         })
         .catch(errors => console.log('d', errors))
     }
+
+    static getTurtles() {
+      fetch(Api.baseUrl + '/api/turtles/')
+        .then(resp => resp.json())
+        .then(turtles => {
+          turtles.forEach(turtle => {
+            let newTurtle = new Turtle(turtle.name);
+          })
+         })
+        .catch(errors => console.log('d', errors))
+      }
+
   
     //submit is good, pizza is being sent to backend and created with a belongs to association
     //need to get getting data from the backend working
@@ -32,7 +44,7 @@ class Api {
          let pizza = new Pizza(data.size, data.style, data.topping);
          pizza.display();
         })
-        clearForm()
+        clearPizzaForm()
     }
   
   }
