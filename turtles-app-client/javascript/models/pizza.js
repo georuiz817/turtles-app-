@@ -1,17 +1,17 @@
 class Pizza {
     static all = [];
   
-    constructor(size,style,topping,turtle_id) {
+    constructor(size,style,topping,turtle) {
         this.size = size;
         this.style = style;
         this.topping = topping;
-        this.turtle_id = turtle_id;
+        this.turtle = turtle;
         Pizza.all.push(this);
       }
 
       // create function to add to the innerHTML of the pizza-list
       template() {
-        return `<li> Turtle ${this.turtle_id} was fed a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li>`
+        return `<li> Turtle ${this.turtle.name} was fed a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li>`
       }
 
 

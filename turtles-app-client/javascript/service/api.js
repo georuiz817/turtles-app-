@@ -7,7 +7,7 @@ class Api {
         .then(resp => resp.json())
         .then(pizzas => {
           pizzas.forEach(pizza => {
-            let newPizza = new Pizza(pizza.size, pizza.style, pizza.topping, pizza.turtle_id);
+            let newPizza = new Pizza(pizza.size, pizza.style, pizza.topping, pizza.turtle);
           })
           Pizza.renderAllPizzas();
         })
@@ -42,7 +42,7 @@ class Api {
       })
         .then(response => response.json())
         .then(data => {
-         let pizza = new Pizza(data.size, data.style, data.topping, data.turtle_id);
+         let pizza = new Pizza(data.size, data.style, data.topping, data.turtle);
          pizza.display();
         })
         clearPizzaForm()
