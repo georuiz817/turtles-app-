@@ -25,7 +25,7 @@ class Turtle {
     }
 
     template() {
-      return `<li>${this.name} is turtle ${this.id}</li>`
+      return `<li>${this.name}</li>`
     }
 
 
