@@ -19,10 +19,15 @@ function clearPizzaForm() {
 
 
 
-// this is adding a submit event to the pizza form, and will invoke the submit pizza button upon submit
+// this is adding a submit event to the pizza form, and will invoke the submit pizza function upon submit
 function addSubmitEventToPizza() {
   document.getElementById("pizza-form").addEventListener('submit', Api.submitPizza);
 }
+
+
+//function addDeleteEventToPizza(){
+//  document.getElementsByClass("deletePizza").addEventListener('click', Api.deletePizzas)
+//}
 
 
 //dom
@@ -30,5 +35,6 @@ document.addEventListener('DOMContentLoaded', function () {
   addSubmitEventToPizza();
   Api.getTurtles();
   Api.getPizzas();
+  //Api.deletePizzas();
 
 });

@@ -46,6 +46,6 @@ class TurtlesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def turtle_params
-      params.require(:turtle).permit(:name, :content, :color, :content)
+      params.require(:turtle).permit(:name, :color)
     end
 end

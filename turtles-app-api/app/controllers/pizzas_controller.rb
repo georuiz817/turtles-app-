@@ -28,6 +28,7 @@ class PizzasController < ApplicationController
 
     def destroy
       @pizza.destroy
+      render json: @pizza
     end
   
     private

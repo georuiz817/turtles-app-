@@ -2,12 +2,11 @@ class Api {
     static baseUrl = 'http://localhost:3000'
   
     static getPizzas() {
-      event.preventDefault();
       fetch(Api.baseUrl + '/api/pizzas/')
         .then(resp => resp.json())
         .then(pizzas => {
           pizzas.forEach(pizza => {
-            let newPizza = new Pizza(pizza.size, pizza.style, pizza.topping, pizza.turtle);
+            let newPizza = new Pizza(pizza.size, pizza.style, pizza.topping, pizza.turtle, pizza.id);
           })
           Pizza.renderAllPizzas();
         })
@@ -42,12 +41,12 @@ class Api {
       })
         .then(response => response.json())
         .then(data => {
-         let pizza = new Pizza(data.size, data.style, data.topping, data.turtle);
+         let pizza = new Pizza(data.size, data.style, data.topping, data.turtle, data.id);
          pizza.display();
         })
         clearPizzaForm()
     }
   
-  }
+}
 
 
