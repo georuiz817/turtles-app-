@@ -12,12 +12,13 @@ class Pizza {
 
       // create function to add to the innerHTML of the pizza-list
       template() {
-        return `<li> ${this.turtle.name} was fed a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li> <button data-id="${this.id}" class="deletePizza">Remove</button>`
+        return `<li> ${this.turtle.name} was fed a ${this.size} ${this.style} pizza with ${this.topping}..Cowabunga!!</li> <button data-id="${this.id}" class="delete">Delete</button>`
       }
-
-
+      //
+     
+      
       display() {
-        document.getElementsByClassName("pizza-list")[0].innerHTML += this.template();
+      document.getElementsByClassName("pizza-list")[0].innerHTML += this.template();
       }
 
 
@@ -25,6 +26,4 @@ class Pizza {
         Pizza.all.forEach(pizza => pizza.display())
       }
 
-  
-
-}
+    }

@@ -25,9 +25,8 @@ function addSubmitEventToPizza() {
 }
 
 
-//function addDeleteEventToPizza(){
-//  document.getElementsByClass("deletePizza").addEventListener('click', Api.deletePizzas)
-//}
+
+function addDeleteEventToPizza(){document.getElementsByClassName("delete").addEventListener('submit',)}
 
 
 //dom
@@ -35,6 +34,5 @@ document.addEventListener('DOMContentLoaded', function () {
   addSubmitEventToPizza();
   Api.getTurtles();
   Api.getPizzas();
-  //Api.deletePizzas();
-
+  
 });

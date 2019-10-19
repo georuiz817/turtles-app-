@@ -1,4 +1,5 @@
 class PizzasController < ApplicationController
+  before_action :set_pizza, only: [:show, :update, :destroy]
   def index
       @pizzas = Pizza.all
       render json: @pizzas, include: [:turtle]
@@ -27,6 +28,7 @@ class PizzasController < ApplicationController
     end
 
     def destroy
+      pizza = Pizza.find(params[:id])
       @pizza.destroy
       render json: @pizza
     end

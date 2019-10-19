@@ -46,7 +46,7 @@ class Api {
         })
         clearPizzaForm()
     }
-  
-}
+
+  }
 
 
