@@ -25,10 +25,6 @@ function addSubmitEventToPizza() {
 }
 
 
-
-function addDeleteEventToPizza(){document.getElementsByClassName("delete").addEventListener('submit',)}
-
-
 //dom
 document.addEventListener('DOMContentLoaded', function () {
   addSubmitEventToPizza();
