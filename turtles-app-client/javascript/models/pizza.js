@@ -15,7 +15,7 @@ class Pizza {
         let li = document.createElement("li")
         li.setAttribute("class", "pizza-li")
         li.setAttribute("id", `${this.id}`)
-        li.innerHTML = `${this.turtle.name}` + " was fed a " + `${this.size}` + `${this.style}` + " pizza with " + `${this.topping}!`
+        li.innerHTML = `${this.turtle.name}` + " was fed a " + `${this.size}` + " " + `${this.style}` + " pizza with " + `${this.topping}!`
         
         let deleteBtn = document.createElement("button")
         deleteBtn.setAttribute("class", "delete-pizza-button")
