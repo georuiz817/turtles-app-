@@ -17,9 +17,8 @@ class Pizza {
         li.setAttribute("id", `${this.id}`)
         li.innerHTML = `${this.turtle.name}` + " was fed a " + `${this.size}` + " " + `${this.style}` + " pizza with " + `${this.topping}!`
         
-        let deleteBtn = document.createElement("button")
-        deleteBtn.setAttribute("class", "delete-pizza-button")
-        deleteBtn.innerText = "delete"
+        let deleteBtn = document.createElement("i")
+        deleteBtn.setAttribute("class", "fas fa-trash")
         deleteBtn.addEventListener("click", event => this.deletePizzaHandler(event, this))
         li.append(deleteBtn)
         pizzaCollection.append(li)

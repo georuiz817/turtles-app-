@@ -1,62 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        body {background-image: url('https://img2.goodfon.com/wallpaper/nbig/c/a2/minimalizm-cherepashki-nindzya.jpg');
-        color:orange;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        
-        }
-        
-    </style>
-</head>
-<body>
-    <h1> Ninja Turtle Pizza Feeder </h1> 
-    <h2> Here are the turtles we will be working with today</h2>
-    <ul class="allNames"> 
-        </ul>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Document</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
-        <h1>Choose a turtle and create a delicious pizza! </h1>
+   <style>
+         body {background-image: url('https://img2.goodfon.com/wallpaper/nbig/c/a2/minimalizm-cherepashki-nindzya.jpg');
+         color:orange;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+         }
 
-            <form id = "pizza-form" action="#">    
-            <span>Turtle:</span>  <select id="turtle1"> 
+         .htag{
+            font-size: 80px;
+         }
+
+         .desc{
+            text-align: center;
+            
+         }
+
+      </style>
+   </head>
+   <body>
+      <h1 class="text-center htag">Turtles-App <i class="fas fa-pizza-slice"></i></h1>
+      <p class=" desc">Who doesn't love pizza? Gain inspiration by viewing the board and feed a turtle your favorite classic (or obscure) pizza slices. </p>
+      <form  id = "pizza-form" action="#">
+         
+         <div class="col-sm-3">
+            <div class="form-group">
+               <label for="turtle">Turtle</label>
+               <select class="custom-select" name="turtle" id="turtle1">
                   <option value=1>Donatello</option>
                   <option value=2>Leonardo</option>
-              </select>
-              <br>
-
-               <label for="size">Size:</label>
-               <input type="string" name="size" id="size">
+               </select>
+             </div>
+             <br>
+            <div class="form-group">
+               <label for="size">Size</label>
+               <input class="form-control" type="string" name="size" id="size">
+            </div>
+            <br>
+            <div class="form-group">
+               <label for="style">Style</label>
+               <input class="form-control" type="style" name="style" id="style">
+            </div>
+            <br>
+            <div class="form-group">
+               <label for="topping">Topping</label>
+               <input class="form-control" type="topping" name="topping" id="topping">
                <br>
-               
-               <label for="style">Style:</label>
-               <input type="style" name="style" id="style">
-               
-               <br>
-               <label for="topping">Topping:</label>
-               <input type="topping" name="topping" id="topping">
-               
-               <br>
-         
-               
-               <input type="submit" value="Feed him the Pizza!" class="button">
-            </form>
- 
-    
-       
-         <h4> Here is all the Pizza the Ninja Turtles has been fed so far:</h4> 
-         <ul class="pizza-list"> 
-             
-         </ul>
-       
-    <script src="./javascript/global.js"></script>
-    <script src="./javascript/models/pizza.js"></script>
-    <script src="./javascript/models/turtle.js"></script>
-    <script src="./javascript/service/api.js"></script>
-    <script src="./javascript/index.js"></script>
-</body>
+            </div>
+            <input type="submit" value="Feed him the Pizza!" class="btn  btn-warning">
+         </div>
+      <br>
+      </form>
+      <h4> Here is all the Pizza the Ninja Turtles has been fed so far:</h4>
+      <ul class="pizza-list"> 
+      </ul>
+      <script src="./javascript/global.js"></script>
+      <script src="./javascript/models/pizza.js"></script>
+      <script src="./javascript/models/turtle.js"></script>
+      <script src="./javascript/service/api.js"></script>
+      <script src="./javascript/index.js"></script>
+   </body>
 </html>
