@@ -1,10 +1,12 @@
+![Website](/turtles-app-client\turImg.png)
+
 ## Turles-App 
 
 Turtles-App is simple yet fun pizza maker. Users will have the ability to create a piece of pizza based off the four pizza properties. Once they’ve chosen the Ninja Turtle of their choice, they will be able to view their pizza along with everyone else’s on the pizza board. To showcase my skills in JavaScript more I also added a delete function. It was pretty tough adding that in at the last min per the technical reviewers request. However, researching and looking to another colleague for some advice I was able to get it done. It was a great learning expierence in regards to figuring out how to request help while making sure you're the one actually doing the work and figuring the problem out. 
 
 ## Prerequisites  
 
-• Ruby/Rails
+• Ruby/Rails  
 • SQLite
 
 ## Installing  
