@@ -8,6 +8,9 @@
 
 
 donatello = Turtle.create(name: 'Donatello')
-Pizza.create(size:'large',style:'regular', topping:'mushroom', turtle_id:6)
 
 Leonardo = Turtle.create(name:"Leonardo")
+
+Michelangelo = Turtle.create(name:'Michelangelo')
+
+Raphael = Turtle.create(name:'Raphael')
